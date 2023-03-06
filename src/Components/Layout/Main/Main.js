@@ -8,6 +8,10 @@ const Main = () => {
       path: "/",
       element: <Start></Start>,
     },
+    {
+      path: "/home",
+      element: <Home></Home>,
+    },
   ]);
   return (
     <div>

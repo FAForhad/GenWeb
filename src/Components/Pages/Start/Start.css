@@ -11,3 +11,9 @@
     box-shadow:  -37px -37px 100px #000c15,
                  37px 37px 100px #00182b;
 }
+.box:hover{
+    border-radius: 58px;
+background: #001220;
+box-shadow:  37px 37px 100px #000c15,
+-37px 37px 100px #00182b;
+}
