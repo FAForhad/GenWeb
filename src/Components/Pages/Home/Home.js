@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <section className="bgc">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-          <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+          <section className="relative flex h-20 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
             <img
               alt="Night"
               src="https://electrek.co/wp-content/uploads/sites/3/2019/09/bianchi_esuv_eurobike_5.jpg?quality=82&strip=all"
@@ -51,31 +51,75 @@ const Home = () => {
 
               <form onSubmit="{handleloginUser}" className="mt-8 grid grid-cols-6 gap-6">
                 <div className="col-span-6">
-                  <label for="Email" className="block text-sm font-medium text-gray-700">
-                    Email
-                  </label>
+                  <label
+                    for="name"
+                    class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                  >
+                    <input
+                      type="name"
+                      id="name"
+                      placeholder="Name"
+                      class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                    />
 
-                  <input
-                    type="email"
-                    id="Email"
-                    name="email"
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                    required
-                  />
+                    <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                      Name
+                    </span>
+                  </label>
                 </div>
 
                 <div className="col-span-6">
-                  <label for="Password" className="block text-sm font-medium text-gray-700">
-                    Password
-                  </label>
+                  <label
+                    for="introduction"
+                    class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                  >
+                    <textarea
+                      type="introduction"
+                      id="introduction"
+                      placeholder="Introduction"
+                      class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                    />
 
-                  <input
-                    type="password"
-                    id="Password"
-                    name="password"
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                    required
-                  />
+                    <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                      Introduction
+                    </span>
+                  </label>
+                </div>
+
+                <div className="col-span-6">
+                  <label
+                    for="name"
+                    class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                  >
+                    <input
+                      type="name"
+                      id="name"
+                      placeholder="Name"
+                      class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                    />
+
+                    <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                      Name
+                    </span>
+                  </label>
+                </div>
+
+                <div className="col-span-6">
+                  <label
+                    for="name"
+                    class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                  >
+                    <input
+                      type="name"
+                      id="name"
+                      placeholder="Name"
+                      class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                    />
+
+                    <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                      Name
+                    </span>
+                  </label>
                 </div>
 
                 <div className="col-span-6">

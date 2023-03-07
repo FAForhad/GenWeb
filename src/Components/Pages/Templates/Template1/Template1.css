@@ -1,0 +1,20 @@
+.bgt1{
+    height: 100vh;
+    background: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../../../public//assets/layered-steps-haikei.svg');
+}
+
+.box_bgt1{
+    border-radius: 16px;
+    background: #140021;
+    box-shadow:  50px 50px 100px #10001a,
+                 -50px -50px 100px #180028;
+}
+.box_bgt1:hover{
+    border-radius: 16px;
+    background: #140021;
+    box-shadow:  33px 33px 80px #10001a,
+                 -33px -33px 80px #180028;
+}

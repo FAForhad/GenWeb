@@ -1,5 +1,7 @@
 .bgc{
     height: 100vh;
+    background: fixed;
     background-size: cover;
     background-image: url('../../../../public/assets/stacked-steps-haikei.svg');
+    background-repeat: no-repeat;
 }
