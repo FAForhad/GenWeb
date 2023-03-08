@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { BsArrowReturnRight } from "react-icons/bs";
+import t1 from "../../../t1.png";
+import t2 from "../../../t2.png";
 import "./Home.css";
 
 const Home = () => {
+  const { template, setTemplate } = useState(false);
+  console.log(template);
+  const handleImageClick = () => {
+    setTemplate(!template);
+  };
   return (
     <div>
       <section className="bgc">
@@ -149,22 +157,30 @@ const Home = () => {
                 </div>
 
                 <div className="col-span-6">
-                  <label for="MarketingAccept" className="flex gap-4">
-                    <span className="text-sm text-gray-700">
-                      I want to receive emails about events, product updates and company
-                      announcements.
+                  <div>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:gap-8 gap-6 lg:mt-8 md:mt-6 mt-4">
+                      <img onClick={handleImageClick} src={t1} className="w-full" alt="kitchen" />
+                      <img
+                        onClick={() => handleImageClick}
+                        src={t2}
+                        className="w-full"
+                        alt="sitting room"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <Link
+                    to={template || true ? "/template1" : "/template2"}
+                    class="inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+                    href="/download"
+                  >
+                    <span class="rounded-sm bg-white px-8 py-3 text-sm font-medium hover:bg-transparent flex items-center gap-2">
+                      GO<BsArrowReturnRight></BsArrowReturnRight>
                     </span>
-                  </label>
+                  </Link>
                 </div>
               </form>
-              <button>
-                <div onClick={"handleGoogleLogin"}>
-                  <span className="text-black flex items-center gap-2 p-1">
-                    {" "}
-                    SignIn With Google{" "}
-                  </span>
-                </div>
-              </button>
             </div>
           </main>
         </div>
