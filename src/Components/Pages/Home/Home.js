@@ -43,7 +43,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <form onSubmit="{handleloginUser}" className="mt-8 grid grid-cols-6 gap-6">
+              <form onSubmit="{handleCreateUser}" className="mt-8 grid grid-cols-6 gap-6">
                 <div className="col-span-6">
                   <label
                     for="name"
@@ -82,38 +82,70 @@ const Home = () => {
 
                 <div className="col-span-6">
                   <label
-                    for="name"
+                    for="Image URL"
                     class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
                   >
                     <input
-                      type="name"
+                      type="url"
                       id="name"
-                      placeholder="Name"
+                      placeholder="Image URL"
                       class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
                     />
 
                     <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
-                      Name
+                      Image URL
                     </span>
                   </label>
                 </div>
 
                 <div className="col-span-6">
-                  <label
-                    for="name"
-                    class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
-                  >
-                    <input
-                      type="name"
-                      id="name"
-                      placeholder="Name"
-                      class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
-                    />
+                  <div className="flex gap-7">
+                    <label
+                      for="email"
+                      class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                    >
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="email"
+                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                      />
 
-                    <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
-                      Name
-                    </span>
-                  </label>
+                      <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                        Email
+                      </span>
+                    </label>
+                    <label
+                      for="github"
+                      class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                    >
+                      <input
+                        type="github"
+                        id="github"
+                        placeholder="github"
+                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                      />
+
+                      <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                        Github
+                      </span>
+                    </label>
+                    <label
+                      for="twitter"
+                      class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
+                    >
+                      <input
+                        type="twitter"
+                        id="twitter"
+                        placeholder="twitter"
+                        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
+                      />
+
+                      <span class="absolute left-0 top-2 -translate-y-1/2 text-lg text-orange-500 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-2 peer-focus:text-xs">
+                        Twitter
+                      </span>
+                    </label>
+                  </div>
                 </div>
 
                 <div className="col-span-6">
