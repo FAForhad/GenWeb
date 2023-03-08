@@ -5,3 +5,10 @@
     background-image: url('../../../../public/assets/stacked-steps-haikei.svg');
     background-repeat: no-repeat;
 }
+
+.bgc_box{
+    background: fixed;
+    background-size: cover;
+    background-image: url('../../../../public/assets/stacked-steps-haikei3.svg');
+    background-repeat: no-repeat;
+}

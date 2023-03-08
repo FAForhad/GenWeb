@@ -7,14 +7,11 @@
 }
 
 .box_bgt1{
-    border-radius: 16px;
-    background: #140021;
-    box-shadow:  50px 50px 100px #10001a,
-                 -50px -50px 100px #180028;
-}
-.box_bgt1:hover{
-    border-radius: 16px;
-    background: #140021;
-    box-shadow:  33px 33px 80px #10001a,
-                 -33px -33px 80px #180028;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.04);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.2px);
+-webkit-backdrop-filter: blur(8.2px);
+border: 1px solid rgba(255, 255, 255, 0.14);
 }

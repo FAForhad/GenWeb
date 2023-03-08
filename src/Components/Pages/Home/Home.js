@@ -7,13 +7,7 @@ const Home = () => {
     <div>
       <section className="bgc">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-          <section className="relative flex h-20 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
-            <img
-              alt="Night"
-              src="https://electrek.co/wp-content/uploads/sites/3/2019/09/bianchi_esuv_eurobike_5.jpg?quality=82&strip=all"
-              className="absolute inset-0 h-full w-full object-cover opacity-80"
-            />
-
+          <section className="relative flex h-20 items-end  lg:col-span-5 lg:h-full xl:col-span-6 bgc_box">
             <div className="hidden lg:relative lg:block lg:p-12">
               <a
                 className="block text-white border-spacing-5 border w-52 h-14 border-orange-500"
@@ -33,7 +27,7 @@ const Home = () => {
             <div className="max-w-xl lg:max-w-3xl">
               <div className="relative -mt-16 block lg:hidden">
                 <a
-                  className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
+                  className="inline-flex h-16 w-16 items-center justify-center rounded-full  text-blue-600 sm:h-20 sm:w-20"
                   href="/"
                 >
                   <span className="sr-only">Home</span>
