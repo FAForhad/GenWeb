@@ -1,0 +1,21 @@
+.bgc2{
+    height: 100vh;
+    background: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../../../public//assets/low-poly-grid-haikei.svg');
+}
+.bgCover2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../../../public//assets/wa.svg');
+}
+.bgc_box2{
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8.2px);
+        -webkit-backdrop-filter: blur(8.2px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        
+}
