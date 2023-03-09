@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BsArrowReturnRight } from "react-icons/bs";
+import { FaArrowRight } from "react-icons/fa";
 import t1 from "../../../t1.png";
 import t2 from "../../../t2.png";
 import "./Home.css";
@@ -159,27 +159,50 @@ const Home = () => {
                 <div className="col-span-6">
                   <div>
                     <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 lg:gap-8 gap-6 lg:mt-8 md:mt-6 mt-4">
-                      <img onClick={handleImageClick} src={t1} className="w-full" alt="kitchen" />
-                      <img
-                        onClick={() => handleImageClick}
-                        src={t2}
-                        className="w-full"
-                        alt="sitting room"
-                      />
+                      <Link
+                        data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-duration="2000"
+                        to="/template1"
+                        aria-label="View Item"
+                      >
+                        <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                          <img className="object-cover w-full  " src={t1} alt="" />
+                          <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                            <br />
+                            <h1 className="text-lg text-gray-100"> To Make Your Profile</h1>
+                            <div className="flex items-center text-lg text-orange-500 p-5">
+                              <p>
+                                Create Profile <FaArrowRight></FaArrowRight>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                      <Link
+                        data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-duration="2000"
+                        to="/template2"
+                        aria-label="View Item"
+                      >
+                        <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                          <img className="object-cover w-full" src={t2} alt="" />
+                          <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                            <br />
+                            <h1 className="text-lg text-gray-100"> To Make Your Profile</h1>
+                            <div className="flex items-center text-lg text-orange-500 p-5">
+                              <p>
+                                Create Profile <FaArrowRight></FaArrowRight>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
-                <div>
-                  <Link
-                    to={template || true ? "/template1" : "/template2"}
-                    class="inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-                    href="/download"
-                  >
-                    <span class="rounded-sm bg-white px-8 py-3 text-sm font-medium hover:bg-transparent flex items-center gap-2">
-                      GO<BsArrowReturnRight></BsArrowReturnRight>
-                    </span>
-                  </Link>
-                </div>
+                <div></div>
               </form>
             </div>
           </main>
