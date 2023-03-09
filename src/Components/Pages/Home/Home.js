@@ -6,11 +6,18 @@ import t2 from "../../../t2.png";
 import "./Home.css";
 
 const Home = () => {
-  const { template, setTemplate } = useState(false);
-  console.log(template);
-  const handleImageClick = () => {
-    setTemplate(!template);
+  const handleCreateUser = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const introduction = form.introduction.value;
+    const image = form.image.value;
+    const twitter = form.twitter.value;
+    const github = form.github.value;
+    console.log(name, email, introduction, image, twitter, github);
   };
+
   return (
     <div>
       <section className="bgc">
@@ -51,7 +58,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <form onSubmit="{handleCreateUser}" className="mt-8 grid grid-cols-6 gap-6">
+              <form onSubmit={handleCreateUser} className="mt-8 grid grid-cols-6 gap-6">
                 <div className="col-span-6">
                   <label
                     for="name"
@@ -60,6 +67,7 @@ const Home = () => {
                     <input
                       type="name"
                       id="name"
+                      name="name"
                       placeholder="Name"
                       class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
                     />
@@ -77,6 +85,7 @@ const Home = () => {
                   >
                     <textarea
                       type="introduction"
+                      name="introduction"
                       id="introduction"
                       placeholder="Introduction"
                       class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
@@ -95,7 +104,7 @@ const Home = () => {
                   >
                     <input
                       type="url"
-                      id="name"
+                      name="image"
                       placeholder="Image URL"
                       class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
                     />
@@ -114,6 +123,7 @@ const Home = () => {
                     >
                       <input
                         type="email"
+                        name="email"
                         id="email"
                         placeholder="email"
                         class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
@@ -129,6 +139,7 @@ const Home = () => {
                     >
                       <input
                         type="github"
+                        name="github"
                         id="github"
                         placeholder="github"
                         class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
@@ -144,6 +155,7 @@ const Home = () => {
                     >
                       <input
                         type="twitter"
+                        name="twitter"
                         id="twitter"
                         placeholder="twitter"
                         class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm text-white"
@@ -166,18 +178,20 @@ const Home = () => {
                         to="/template1"
                         aria-label="View Item"
                       >
-                        <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                          <img className="object-cover w-full  " src={t1} alt="" />
-                          <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                            <br />
-                            <h1 className="text-lg text-gray-100"> To Make Your Profile</h1>
-                            <div className="flex items-center text-lg text-orange-500 p-5">
-                              <p>
-                                Create Profile <FaArrowRight></FaArrowRight>
-                              </p>
+                        <button type="submit">
+                          <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                            <img className="object-cover w-full  " src={t1} alt="" />
+                            <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                              <br />
+                              <h1 className="text-lg text-gray-100"> To Make Your Profile</h1>
+                              <div className="flex items-center text-lg text-orange-500 p-5">
+                                <p>
+                                  Create Profile <FaArrowRight></FaArrowRight>
+                                </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </button>
                       </Link>
                       <Link
                         data-aos="fade-left"
@@ -186,23 +200,24 @@ const Home = () => {
                         to="/template2"
                         aria-label="View Item"
                       >
-                        <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                          <img className="object-cover w-full" src={t2} alt="" />
-                          <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                            <br />
-                            <h1 className="text-lg text-gray-100"> To Make Your Profile</h1>
-                            <div className="flex items-center text-lg text-orange-500 p-5">
-                              <p>
-                                Create Profile <FaArrowRight></FaArrowRight>
-                              </p>
+                        <button type="submit">
+                          <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                            <img className="object-cover w-full" src={t2} alt="" />
+                            <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
+                              <br />
+                              <h1 className="text-lg text-gray-100"> To Make Your Profile</h1>
+                              <div className="flex items-center text-lg text-orange-500 p-5">
+                                <p>
+                                  Create Profile <FaArrowRight></FaArrowRight>
+                                </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </button>
                       </Link>
                     </div>
                   </div>
                 </div>
-                <div></div>
               </form>
             </div>
           </main>
